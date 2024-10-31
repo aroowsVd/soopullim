@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* header section_00 */
+#header.sections.section_00 { position: fixed; top: 0; left: 0; width: 100%; z-index: 999; }
+#header.sections.section_00 > .width_con { padding: var(--mrgn) 0; display: flex; justify-content: space-between; align-items: center; }
+#header.sections.section_00 > .width_con > a { display: inline-block; width: 200px; }
+#header.sections.section_00 > .width_con > nav.lnb {}
+#header.sections.section_00 > .width_con > nav.lnb > ul.v_con { position: relative; }
+#header.sections.section_00 > .width_con > nav.lnb > ul.v_con::before { content: ''; clear: both; }
+#header.sections.section_00 > .width_con > nav.lnb > ul.v_con > li { float: left; margin-left: var(--mrgn-x2); }
+#header.sections.section_00 > .width_con > nav.lnb > ul.v_con > li > a { display: inline-block; padding: 5px; }
+
+/* visual */
+#visual.sections.section_01 { height: 100vh; overflow: hidden; }
+#visual.sections.section_01 > .bg_circle { position: absolute; top: -150px; right: -10px; width: 1030px; }
+#visual.sections.section_01 > .width_con {}
+#visual.sections.section_01 > .width_con > ul.v_con { display: flex; align-items: center; }
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells {}
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells > .btn_circle { position: relative; width: 560px; display: flex; justify-content: center; align-items: center; }
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells > .btn_circle::before,
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells > .btn_circle::after
+ { position: absolute; content: ''; top: 50%; left: 50%; border-radius: 50%; transform: translate(-50%, -50%); }
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells > .btn_circle::before { width: 95%; height: 95%; background: linear-gradient(135deg, var(--color-sub), var(--color-point)); }
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells > .btn_circle::after { width: 93%; height: 93%; background: var(--color-background); }
+#visual.sections.section_01 > .width_con > ul.v_con > li.cells > .btn_circle > img { position: relative; z-index: 2; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
