@@ -30,6 +30,7 @@
 	--color-w:   #fff;
 
 	--color-k-000: rgba(0, 0, 0, 0);
+	--color-k-005: rgba(0, 0, 0, .05);
 	--color-k-015: rgba(0, 0, 0, .15);
 	--color-k-025: rgba(0, 0, 0, .25);
 	--color-k-035: rgba(0, 0, 0, .35);
@@ -66,7 +67,7 @@ h4 { font-size:   20px; font-weight: 500; }
 h5 { font-size:   16px; font-weight: 500; }
 h6 { font-size:  .85em; font-weight: 500; }
 a  { font-size:    1em; font-weight: 600; }
-p  { font-size:   20px; font-weight: 500; }
+p  { font-size:   18px; font-weight: 500; }
 
 h3 > i { font-size: 25px; margin-right: var(--mrgn); }
 h3 > * { vertical-align: middle; }
@@ -103,9 +104,10 @@ ul.v_con.nine_con  > li.cells { width: calc(11.111% - var(--mrgn-x2)); }
 .btn_circle.inset { box-shadow: inset -2px -2px 4px #fff, inset 2px 2px 6px var(--color-k-015); }
 .btn_circle i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, var(--color-k-025) 50%, var(--color-w)); background-clip: text; -webkit-background-clip: text; color: transparent; }
 .btn_circle.clickable { box-shadow: -4px -4px 10px var(--color-w-085), 4px 4px 10px var(--color-k-025); transition: 0.15s all linear; }
-.btn_circle.clickable:hover { opacity: 0.5; }
+.btn_circle.clickable:hover i {}
 .btn_circle.clickable:active { opacity: 1; box-shadow: inset -4px -4px 8px var(--color-w-050), inset 4px 4px 8px var(--color-k-015); }
-.neu_box { background: var(--color-background); border-radius: 40px; box-shadow: -4px -4px 6px #fff, 4px 4px 8px var(--color-k-015); }
+.neu_box { background: var(--color-background); border-radius: 20px; box-shadow: -4px -4px 6px #fff, 4px 4px 8px var(--color-k-015); }
+.neu_box.clickable { box-shadow: -4px -4px 10px var(--color-w-085), 4px 4px 10px var(--color-k-035); transition: 0.15s all linear; }
 .logo_m { position: relative; padding: var(--mrgn-half); box-sizing: border-box; }
 .logo_m::before,
 .logo_m::after { position: absolute; content: ''; top: 50%; left: 50%; border-radius: 50%; transform: translate(-50%, -50%); }
