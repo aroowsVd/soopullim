@@ -63,4 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     tab();
+
+    // btn toggle
+    const btnToggle = () => {
+        const btnMail = document.querySelector('.mail_btn');
+        btnMail.addEventListener('click', () => {
+            btnMail.classList.toggle('active');
+        });
+    }
+    btnToggle();
 });

@@ -104,7 +104,7 @@ ul.v_con.nine_con  > li.cells { width: calc(11.111% - var(--mrgn-x2)); }
 .btn_circle.inset { box-shadow: inset -2px -2px 4px #fff, inset 2px 2px 6px var(--color-k-015); }
 .btn_circle i { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, var(--color-k-025) 50%, var(--color-w)); background-clip: text; -webkit-background-clip: text; color: transparent; }
 .btn_circle.clickable { box-shadow: -4px -4px 10px var(--color-w-085), 4px 4px 10px var(--color-k-025); transition: 0.15s all linear; }
-.btn_circle.clickable:hover i {}
+.btn_circle.clickable:hover i { background: linear-gradient(135deg, var(--color-point) 50%, var(--color-sub)); background-clip: text; -webkit-background-clip: text; }
 .btn_circle.clickable:active { opacity: 1; box-shadow: inset -4px -4px 8px var(--color-w-050), inset 4px 4px 8px var(--color-k-015); }
 .neu_box { background: var(--color-background); border-radius: 20px; box-shadow: -4px -4px 6px #fff, 4px 4px 8px var(--color-k-015); }
 .neu_box.clickable { box-shadow: -4px -4px 10px var(--color-w-085), 4px 4px 10px var(--color-k-035); transition: 0.15s all linear; }
@@ -120,8 +120,8 @@ ul.v_con.nine_con  > li.cells { width: calc(11.111% - var(--mrgn-x2)); }
 .fixed_btn > .github_btn { margin-bottom: var(--mrgn-x2); }
 .fixed_btn > div > a { display: inline-block; font-size: 20px; text-shadow: none; }
 
-
-
+/* gradient */
+.bg_gradient { position: absolute; left: 0; top: 50%; width: 400px; height: 600px; background: radial-gradient(at 39% 9%, #11bb66 0px, transparent 100%), radial-gradient(at 0% 99%, #11bbbb 0px, transparent 66%), radial-gradient(at 88% 42%, #bb6611 0px, transparent 71%) #fff; border-radius: 0% 100% 58% 0% / 49% 100% 55% 44%; filter: blur(80px); }
 
 
 
