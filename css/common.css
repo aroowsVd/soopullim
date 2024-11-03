@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 { position: relative; line-height: 1em; }
 h1, h2, h3, h4, h5, h6, span, strong, a, p { font-family: "Poppins"; text-shadow: -1px -1px 3px #fff, 1px 1px 3px rgb(123 164 219 / 75%); }
 h1 { font-size:   80px; font-weight: 600; line-height: .85em; }
 h2 { font-size:   60px; font-weight: 500; }
-h3 { font-size:   32px; font-weight: 600; }
+h3 { font-size:   32px; font-weight: 600; text-transform: uppercase; }
 h4 { font-size:   20px; font-weight: 500; }
 h5 { font-size:   16px; font-weight: 500; }
 h6 { font-size:  .85em; font-weight: 500; }
@@ -72,10 +72,10 @@ p  { font-size:   18px; font-weight: 500; }
 h3 > i { font-size: 25px; margin-right: var(--mrgn); }
 h3 > * { vertical-align: middle; }
 
-.title_con h1 { display: inline-block; margin-bottom: var(--mrgn-x2); }
+.title_con h1 { display: inline-block; margin-bottom: var(--mrgn-x2); text-transform: uppercase; }
 .title_con h1::before { position: absolute; content: ''; left: 0; bottom: calc(var(--mrgn) * -1); width: 100%; height: 4px; background: transparent; box-shadow: -1px -1px 2px rgba(123, 164, 219, 0.1), 1px 1px 2px rgba(255, 255, 255, 0.5), inset 1px 1px 2px var(--color-k-015), inset -1px -1px 2px var(--color-w); }
 .title_con h1::after { position: absolute; content: ''; left: 0; bottom: calc(var(--mrgn) * -1); width: var(--mrgn-x4); height: 4px; background: linear-gradient(to right, var(--color-sub), var(--color-point)); box-shadow: -2px -2px 4px var(--color-w), 1px 1px 3px var(--color-k-075); }
-.title_con h2 { display: inline-block; margin-bottom: var(--mrgn-x2); }
+.title_con h2 { display: inline-block; margin-bottom: var(--mrgn-x2); text-transform: uppercase; }
 .title_con h2::before { position: absolute; content: ''; left: 0; bottom: calc(var(--mrgn) * -1); width: 100%; height: 4px; background: transparent; box-shadow: -1px -1px 2px rgba(123, 164, 219, 0.1), 1px 1px 2px rgba(255, 255, 255, 0.5), inset 1px 1px 2px var(--color-k-015), inset -1px -1px 2px var(--color-w); }
 .title_con h2::after { position: absolute; content: ''; left: 0; bottom: calc(var(--mrgn) * -1); width: var(--mrgn-x4); height: 4px; background: linear-gradient(to right, var(--color-sub), var(--color-point)); box-shadow: -2px -2px 4px var(--color-w), 1px 1px 3px var(--color-k-075); }
 .title_con h3 { display: inline-block; position: relative; margin-bottom: var(--mrgn-half); background: linear-gradient(to right, var(--color-sub), var(--color-point)); background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(-1px -1px 1px #fff) drop-shadow(1px 1px 1px rgb(123 164 219 / 75%)); }
