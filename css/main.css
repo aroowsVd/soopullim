@@ -3,7 +3,7 @@
 /* fixed btn */
 .mail_btn { height: 45px; font-size: 20px; border-radius: 100px; cursor: pointer; }
 .mail_btn i { left: 10px; transform: translate(0, -50%); }
-.mail_btn span { position: absolute; left: 45px; top: 50%; font-size: 14px; transform: translate(0, -50%); opacity: 0; transition: 0.15s all linear; }
+.mail_btn span { position: absolute; left: 45px; top: 50%; font-size: 14px; transform: translate(0, -50%); opacity: 0; pointer-events: none; transition: 0.15s all linear; }
 .mail_btn.active { width: 200px; }
 .mail_btn.active span { opacity: 1; }
 
@@ -98,10 +98,9 @@
 #works.sections.section_04 > .width_con > .tab_li_con.all > ul > li.gd:nth-child(12) { transition-delay: 0.1s; }
 #works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.web {}
 #works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.web > img { filter: saturate(0%) blur(0) opacity(1); transition: filter 0.7s 0.2s ease-out; }
-#works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd { box-shadow: none; }
+#works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd { box-shadow: none; pointer-events: none; }
 #works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd > img { filter: saturate(0%) blur(100px) opacity(0); transition: filter 0.7s 0.2s ease-out; }
-#works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.web:hover > img,
-#works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd:hover > img { filter: saturate(100%) blur(0) opacity(1); transition: filter 0.7s ease-out; }
+#works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.web:hover > img { filter: saturate(100%) blur(0) opacity(1); transition: filter 0.7s ease-out; }
 #works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd:nth-child(6) { transition-delay:    0s; }
 #works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd:nth-child(7) { transition-delay:  0.1s; }
 #works.sections.section_04 > .width_con > .tab_li_con.website > ul > li.gd:nth-child(8) { transition-delay:  0.2s; }
