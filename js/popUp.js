@@ -26,15 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             "data_id": "3",
-            "link": "",
+            "link": "http://soopullim.com/portfolio/bang&olufsen/",
             "h3": "promotion site",
-            "h2": "",
+            "h2": "Bang & Olufsen",
             "completed": "",
             "type": "Full Page Web",
             "tools": "HTML, CSS, Javascript",
             "scope": "Web Design,<br>Front-End Development",
             "contribution": "100%",
-            "img_src": [""]
+            "img_src": ["img/img_popup_03_01.webp", "img/img_popup_03_02.webp", "img/img_popup_03_03.webp" ,"img/img_popup_03_04.webp" ,"img/img_popup_03_05.webp" ,"img/img_popup_03_06.webp"]
         },
         {
             "data_id": "4",
