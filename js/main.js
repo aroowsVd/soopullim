@@ -72,4 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     btnToggle();
+
+    //dark mode
+    const darkModeToggle = () => {
+        const darkModeToggleBtn = document.querySelector('.dark_toggle');
+        const imgSrc = document.querySelector('#header > .width_con > a > img');
+        darkModeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle("dark");
+            if(imgSrc.src.includes('img/ci_soopullim_h.svg')) {
+                imgSrc.src = 'img/ci_soopullim_h_w.svg';
+            } else {
+                imgSrc.src = 'img/ci_soopullim_h.svg';
+            }
+        });
+    }
+    darkModeToggle();
 });
