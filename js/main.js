@@ -1,3 +1,19 @@
+// cookie
+function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if(c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // nav segment move
     const navLists = document.querySelectorAll('nav li');
@@ -79,6 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const imgSrc = document.querySelector('#header > .width_con > a > img');
         darkModeToggleBtn.addEventListener('click', () => {
             document.documentElement.classList.toggle("dark");
+            if(document.documentElement.classList.contains('dark')) {
+                setCookie('theme', 'dark', 1);
+            } else {
+                setCookie('theme', 'light', 1);
+            }
             if(imgSrc.src.includes('img/ci_soopullim_h.svg')) {
                 imgSrc.src = 'img/ci_soopullim_h_w.svg';
             } else {
@@ -88,3 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     darkModeToggle();
 });
+
+window.onload = function() {
+    const theme = getCookie('theme');
+    const darkModeToggleBtn = document.querySelector('.dark_toggle');
+    const imgSrc = document.querySelector('#header > .width_con > a > img');
+    if(theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        darkModeToggleBtn.checked = true;
+        imgSrc.src = 'img/ci_soopullim_h_w.svg';
+    }
+};
