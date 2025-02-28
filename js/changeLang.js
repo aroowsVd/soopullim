@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
     langModal();
 
     const changeLanguage = (lang) => {
-        let changeNodeList = Array.prototype.slice.call(document.querySelectorAll('[data-detect]'));
+        let changeNodeList = document.querySelectorAll('[data-detect]');
 
-        changeNodeList.map(v => {
-            v.innerHTML = translations[lang][v.dataset.detect];
+        changeNodeList.forEach(v => {
+            v.textContent = translations[lang][v.dataset.detect];
         });
     }
 });
