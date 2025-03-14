@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let changeNodeList = document.querySelectorAll('[data-detect]');
 
         changeNodeList.forEach(v => {
-            v.textContent = translations[lang][v.dataset.detect];
+            v.innerHTML = translations[lang][v.dataset.detect];
         });
     }
 });
