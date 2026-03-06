@@ -3,7 +3,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
 :root {
-    --mrgn-half: calc(var(--mrgn) / 2);  /*9px*/
+  --mrgn-half: calc(var(--mrgn) / 2);  /*9px*/
 	--mrgn:      18px;
 	--mrgn-x2:   calc(var(--mrgn) * 2); /*36px*/
 	--mrgn-x4:   calc(var(--mrgn) * 4); /*72px*/
@@ -14,14 +14,14 @@
 	--mrgn-x10:  calc(var(--mrgn) * 10);/*180px*/
 	--mrgn-x11:  calc(var(--mrgn) * 11);/*198px*/
 
-    --basic-width: 1200px;
+  --basic-width: 1200px;
 	--basic-font-size: 16px;
-    --fixed-width: 1600px;
+  --fixed-width: 1600px;
 
-    --color-main:  #222;
+  --color-main:  #222;
 	--color-point: #338b93;
 	--color-sub:   #b6f492;
-    --color-background: #eef2f6;
+  --color-background: #eef2f6;
 
     --color-w-000: rgba(255, 255, 255, 0);
 	--color-w-005: rgba(255, 255, 255, .05);
