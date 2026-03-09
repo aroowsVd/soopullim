@@ -108,6 +108,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     darkModeToggle();
+
+    // tab segment
+    function adjustSegmentWidth() {
+        const tabSegment = document.querySelector('.tab_segment');
+        if (tabSegment) {
+        const parentElement = tabSegment.parentElement;
+        const activeTab = parentElement.querySelector('.tab_btn.selected');
+        
+        if (activeTab) {
+            const activeTabWidth = activeTab.clientWidth;
+            
+            // 모든 탭을 가져오기
+            const allTabs = parentElement.querySelectorAll('.tab_btn');
+            
+            // 활성 탭까지의 너비 합계 계산
+            let leftPosition = 0;
+            for (let i = 0; i < allTabs.length; i++) {
+            if (allTabs[i].classList.contains('selected')) {
+                break;
+            }
+            leftPosition += allTabs[i].clientWidth;
+            }
+            
+            tabSegment.style.width = `${activeTabWidth}px`;
+            tabSegment.style.left = `${leftPosition}px`;
+        }
+        }
+    }
+
+    setTimeout(adjustSegmentWidth, 100);
+
+    // 탭이 변경될 때마다 segment width 및 left 값 조정
+    document.querySelectorAll('.tab_btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setTimeout(adjustSegmentWidth, 0);
+        });
+    });
 });
 
 window.onload = function() {
