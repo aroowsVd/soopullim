@@ -145,6 +145,31 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(adjustSegmentWidth, 0);
         });
     });
+
+    // header scroll
+    let lastScrollY = window.scrollY;
+    const headerFix = () => {
+        const header = document.querySelector('#header');
+        const currentScrollY = window.scrollY;
+
+        if(currentScrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        if(currentScrollY <= 0) {
+            header.classList.remove('hide');
+        } else if(currentScrollY > lastScrollY && currentScrollY > header.offsetHeight) {
+            header.classList.add('hide');
+        } else {
+            header.classList.remove('hide');
+        }
+
+        lastScrollY = currentScrollY;
+    }
+    window.addEventListener('scroll', headerFix);
+    headerFix();
 });
 
 window.onload = function() {

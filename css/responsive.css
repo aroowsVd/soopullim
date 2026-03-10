@@ -53,7 +53,7 @@
 @media (width <= 767px) {
   .width_con { padding: var(--mrgn-x4) 0; }
 
-  ul.v_con { display: flex; flex-wrap: wrap; }
+  ul.v_con { display: flex; flex-wrap: wrap; gap: var(--mrgn); }
   ul.v_con.two_con > li.cells { width: calc(100% - var(--mrgn)); }
   ul.v_con > li.cells:has(.title_con) { order: 0; }
   ul.v_con > li.cells:not(:has(.title_con)) { order: 1; }
