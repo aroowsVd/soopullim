@@ -14,7 +14,7 @@
 
   h1 { font-size: 60px; }
   h2 { font-size: 48px; }
-  h3 { font-size: 28px; }
+  h3 { font-size: 26px; }
   h4 { font-size: 18px; }
 
   #visual.sections.section_01 > .width_con > .bg_circle { width: 900px; margin: 0 0 0 405px; }
@@ -62,7 +62,7 @@
 
   h1 { font-size: 44px; }
   h2 { font-size: 32px; font-weight: 600; }
-  h3 { font-size: 24px; }
+  h3 { font-size: 22px; }
   p  { font-size: 16px; }
 
   h3 > i { margin-right: var(--mrgn-half); font-weight: inherit; }
