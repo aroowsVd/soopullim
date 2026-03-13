@@ -159,6 +159,19 @@ html.dark #footer.sections.section_06 > p { opacity: 0.8; }
 /* project */
 #project > .width_con > h3 { margin-bottom: var(--mrgn); text-align: center; background: linear-gradient(to right, var(--color-sub), var(--color-point)); background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(-1px -1px 1px #fff) drop-shadow(1px 1px 1px rgb(123 164 219 / 75%)); }
 #project > .width_con > h2 { margin-bottom: var(--mrgn-x2); text-transform: capitalize; text-align: center; font-weight: 700; color: var(--color-background); text-shadow: -3px -3px 5px #fff, 4px 4px 8px var(--color-k-015); }
+#project > .width_con .tab_li_con ul { padding: var(--mrgn-x2); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--mrgn-x2); }
+#project > .width_con .tab_li_con ul li { position: relative; overflow: hidden; border-radius: 13px; cursor: pointer; }
+#project > .width_con .tab_li_con ul li::after { content: ''; position: absolute; inset: -0.5rem; backdrop-filter: blur(15px) saturate(1.5) brightness(0.8); background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%); mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.5) 55%, black 75%); z-index: 1; }
+#project > .width_con .tab_li_con ul li:active { box-shadow: none; }
+#project > .width_con .tab_li_con ul li.snu { background: linear-gradient(135deg, #03090f, #024472); }
+#project > .width_con .tab_li_con ul li.sj { background: linear-gradient(135deg, #900c12, #b5121b); }
+#project > .width_con .tab_li_con ul li.cnu { background: linear-gradient(135deg, #00451f, #007f39); }
+#project > .width_con .tab_li_con ul li img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+#project > .width_con .tab_li_con ul li .desc_con { position: absolute; left: 0; right: 0; bottom: 0; display: grid; justify-content: flex-start; align-content: end; gap: 8px; padding: var(--mrgn); z-index: 2; }
+#project > .width_con .tab_li_con ul li .period { color: var(--color-w-085); font-size: 14px; font-weight: 500; }
+#project > .width_con .tab_li_con ul li .title { color: var(--color-w); font-size: clamp(16px, 1.5vw, 17px); font-weight: 500; }
+#project > .width_con .tab_li_con ul li .sub_title { display: grid; grid-template-columns: 1fr auto; place-content: start; gap: 3px; color: var(--color-w); font-size: clamp(15px, 1.5vw, 15px); font-weight: 400; }
+#project > .width_con .tab_li_con ul li .sub_title > div { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* gradient */
 .bg_gradient { position: absolute; left: 50%; top: 50%; width: 400px; height: 600px; background: radial-gradient(at 39% 9%, #11bb66 0px, transparent 100%), radial-gradient(at 0% 99%, #11bbbb 0px, transparent 66%), radial-gradient(at 88% 42%, #bb6611 0px, transparent 71%) #fff; border-radius: 0% 100% 58% 0% / 49% 100% 55% 44%; filter: blur(80px); transform: translate(-250%, 0); }
