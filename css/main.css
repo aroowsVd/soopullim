@@ -163,10 +163,11 @@ html.dark #footer.sections.section_06 > p { opacity: 0.8; }
 #project > .width_con .tab_li_con ul li { position: relative; overflow: hidden; border-radius: 13px; cursor: pointer; }
 #project > .width_con .tab_li_con ul li::after { content: ''; position: absolute; inset: -0.5rem; backdrop-filter: blur(15px) saturate(1.5) brightness(0.8); background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%); mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.5) 55%, black 75%); z-index: 1; }
 #project > .width_con .tab_li_con ul li:active { box-shadow: none; }
+#project > .width_con .tab_li_con ul li:hover img { transform: scale(1.1); }
 #project > .width_con .tab_li_con ul li.snu { background: linear-gradient(135deg, #03090f, #024472); }
 #project > .width_con .tab_li_con ul li.sj { background: linear-gradient(135deg, #900c12, #b5121b); }
 #project > .width_con .tab_li_con ul li.cnu { background: linear-gradient(135deg, #00451f, #007f39); }
-#project > .width_con .tab_li_con ul li img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+#project > .width_con .tab_li_con ul li img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: all 0.2s ease-in-out; }
 #project > .width_con .tab_li_con ul li .desc_con { position: absolute; left: 0; right: 0; bottom: 0; display: grid; justify-content: flex-start; align-content: end; gap: 8px; padding: var(--mrgn); z-index: 2; }
 #project > .width_con .tab_li_con ul li .period { color: var(--color-w-085); font-size: 14px; font-weight: 500; }
 #project > .width_con .tab_li_con ul li .title { color: var(--color-w); font-size: clamp(16px, 1.5vw, 17px); font-weight: 500; }
