@@ -46,6 +46,8 @@
 
   #footer.sections.section_06 > img { width: 200px; }
 
+  #project > .width_con .tab_li_con ul { gap: var(--mrgn); }
+
   .popup_con > .width_con > ul.v_con > li.cells:first-child, .popup_con > .width_con > ul.v_con > li.cells:last-child { width: calc(100% - var(--mrgn)); }
   .popup_con > .width_con > ul.v_con > li.cells:first-child { top: 0; }
 }
@@ -86,6 +88,8 @@
   #contact.sections.section_05 > .width_con > ul.v_con > li.cells > .neu_box_inner > .neu_box { width: 65px; }
 
   #footer.sections.section_06 > img { width: 160px; }
+
+  #project > .width_con .tab_li_con ul { padding: var(--mrgn); }
 
   .popup_con > .width_con > ul.v_con > li.cells:first-child { padding: var(--mrgn); }
   .popup_con > .width_con > ul.v_con > li.cells > .title_con > h3 { font-size: 19px; }

@@ -159,7 +159,7 @@ html.dark #footer.sections.section_06 > p { opacity: 0.8; }
 /* project */
 #project > .width_con > h3 { margin-bottom: var(--mrgn); text-align: center; background: linear-gradient(to right, var(--color-sub), var(--color-point)); background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(-1px -1px 1px #fff) drop-shadow(1px 1px 1px rgb(123 164 219 / 75%)); }
 #project > .width_con > h2 { margin-bottom: var(--mrgn-x2); text-transform: capitalize; text-align: center; font-weight: 700; color: var(--color-background); text-shadow: -3px -3px 5px #fff, 4px 4px 8px var(--color-k-015); }
-#project > .width_con .tab_li_con ul { padding: var(--mrgn-x2); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--mrgn-x2); }
+#project > .width_con .tab_li_con ul { padding: var(--mrgn-x2); display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--mrgn-x2); }
 #project > .width_con .tab_li_con ul li { position: relative; overflow: hidden; border-radius: 13px; cursor: pointer; }
 #project > .width_con .tab_li_con ul li::after { content: ''; position: absolute; inset: -0.5rem; backdrop-filter: blur(15px) saturate(1.5) brightness(0.8); background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%); mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.5) 55%, black 75%); z-index: 1; }
 #project > .width_con .tab_li_con ul li:active { box-shadow: none; }
