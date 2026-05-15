@@ -47,9 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 탭메뉴
     const tab = () => {
-        const tabBtn = document.querySelectorAll('.tab_con .tab_btn');
-        const tabLi = document.querySelector('.tab_li_con');
-        let tabBtnId = '';
+        const worksSection = document.querySelector('#works');
+        const tabBtn = worksSection.querySelectorAll('.tab_con .tab_btn');
+        const tabLi = worksSection.querySelector('.tab_li_con');
+
+        if (!tabLi || !tabBtn.length) {
+            return;
+        }
+
         tabBtn.forEach(ele => {
             ele.addEventListener('click', () => {
                 tabBtn.forEach(el => {

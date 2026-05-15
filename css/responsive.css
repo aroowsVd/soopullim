@@ -50,6 +50,9 @@
 
   .popup_con > .width_con > ul.v_con > li.cells:first-child, .popup_con > .width_con > ul.v_con > li.cells:last-child { width: calc(100% - var(--mrgn)); }
   .popup_con > .width_con > ul.v_con > li.cells:first-child { top: 0; }
+
+  .popup_project_con > .width_con > ul.v_con > li.cells:first-child, .popup_project_con > .width_con > ul.v_con > li.cells:last-child { width: calc(100% - var(--mrgn)); }
+  .popup_project_con > .width_con > ul.v_con > li.cells:first-child { top: 0; }
 }
 
 @media (width <= 767px) {

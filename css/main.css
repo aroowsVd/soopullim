@@ -8,7 +8,7 @@
 .mail_btn.active span { opacity: 1; }
 
 /* section common */
-.sections { overflow-x: clip; }
+.sections:not(header) { overflow-x: clip; }
 
 /* header section_00 */
 #header.sections.section_00 { position: fixed; top: 0; left: 50%; width: 100%; border: 1px solid rgba(255, 255, 255, 0.06); z-index: 999; transition: transform 0.3s ease; box-sizing: border-box; transform: translateX(-50%); }
@@ -33,6 +33,16 @@
 #header.sections.section_00 > .width_con > .lang_dropdown > p:last-child { font-size: 14px; margin-bottom: 0; }
 #header.sections.section_00 > .width_con > .lang_dropdown > p > i { position: absolute; top: 0; right: calc(100% + var(--mrgn-half)); opacity: 0; }
 #header.sections.section_00 > .width_con > .lang_dropdown > p.checked > i { opacity: 1; }
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-gadget,
+.goog-te-gadget-simple,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-te-balloon-frame,
+body > .skiptranslate { display: none !important; }
+body { top: 0 !important; }
+#goog-gt-tt { display: none !important; }
 #header.sections.section_00 > .width_con > .dark_mode_toggle { position: absolute; top: 50%; right: 0; transform: translateY(-50%); }
 #header.sections.section_00 > .width_con > .dark_mode_toggle > .dark_toggle { display: none; }
 #header.sections.section_00 > .width_con > .dark_mode_toggle > .dark_toggle_label { position: relative; width: 40px; height: 16px; border: 2px solid var(--color-main); border-radius: 50px; padding: 2px; display: flex; justify-content: space-between; align-items: center; box-shadow: -1px -1px 3px #fff, 1px 1px 3px rgb(123 164 219 / 75%); cursor: pointer; }
@@ -167,6 +177,7 @@ html.dark #footer.sections.section_06 > p { opacity: 0.8; }
 #project > .width_con .tab_li_con ul li.snu { background: linear-gradient(135deg, #03090f, #024472); }
 #project > .width_con .tab_li_con ul li.sj { background: linear-gradient(135deg, #900c12, #b5121b); }
 #project > .width_con .tab_li_con ul li.cnu { background: linear-gradient(135deg, #00451f, #007f39); }
+#project > .width_con .tab_li_con ul li.rsb { background: linear-gradient(135deg, #41509e, #92d7f3); }
 #project > .width_con .tab_li_con ul li img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: all 0.2s ease-in-out; }
 #project > .width_con .tab_li_con ul li .desc_con { position: absolute; left: 0; right: 0; bottom: 0; display: grid; justify-content: flex-start; align-content: end; gap: 8px; padding: var(--mrgn); z-index: 2; }
 #project > .width_con .tab_li_con ul li .period { color: var(--color-w-085); font-size: 14px; font-weight: 500; }
