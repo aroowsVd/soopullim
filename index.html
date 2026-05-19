@@ -36,20 +36,20 @@
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
 
     <!-- javascript -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/popUp.js"></script>
-    <script type="text/javascript" src="js/popupProject.js"></script>
-    <script type="text/javascript" src="js/changeLang.js"></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/popUp.js" defer></script>
+    <script type="text/javascript" src="js/popupProject.js" defer></script>
+    <script type="text/javascript" src="js/changeLang.js" defer></script>
 
     <!-- favicon -->
-    <link rel="icon" type="img/webp" sizes="32x32" href="img/favicon_32x32.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="img/favicon_32x32.webp">
 </head>
 <body>
     <div class="wrap">
         <!-- fixed contact button -->
         <div class="fixed_btn">
             <div class="github_btn">
-                <a class="btn_circle clickable ratio_1x1" href="https://github.com/aroowsVd" target="e_blank">
+                <a class="btn_circle clickable ratio_1x1" href="https://github.com/aroowsVd" target="_blank" rel="noopener noreferrer">
                     <img src="img/github-brands-solid.svg" alt="github logo">
                 </a>
             </div>
@@ -83,15 +83,15 @@
                         <li class="nav_segment"></li>
                     </ul>
                 </nav>
-                <div class="lang_btn">
+                <div class="lang_btn notranslate" translate="no">
                     <i class="fa-regular fa-globe"></i>
-                    <p>한국어</p>
+                    <p lang="ko">한국어</p>
                     <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="lang_dropdown neu_box">
-                    <p id="koBtn" class="checked" data-lang="ko"><i class="fa-solid fa-check"></i>한국어</p>
-                    <p id="enBtn" class="" data-lang="en"><i class="fa-solid fa-check"></i>English</p>
-                    <p id="jpBtn" class="" data-lang="ja"><i class="fa-solid fa-check"></i>日本語</p>
+                <div class="lang_dropdown neu_box notranslate" translate="no">
+                    <p id="koBtn" class="checked" data-lang="ko" lang="ko"><i class="fa-solid fa-check"></i>한국어</p>
+                    <p id="enBtn" class="" data-lang="en" lang="en"><i class="fa-solid fa-check"></i>English</p>
+                    <p id="jpBtn" class="" data-lang="ja" lang="ja"><i class="fa-solid fa-check"></i>日本語</p>
                 </div>
                 <div class="dark_mode_toggle">
                     <input type="checkbox" class="dark_toggle" id="dark_toggle">
@@ -195,7 +195,7 @@
                                     <p>Adobe Illustrator</p>
                                     <p>Adobe Photoshop</p>
                                     <p>Microsoft Office<br>Powerpoint</p>
-                                    <p>Microsoft Office Exel</p>
+                                    <p>Microsoft Office Excel</p>
                                 </li><!--
                              --><li class="cells">
                                     <p>Microsoft Office Word</p>
@@ -248,7 +248,7 @@
                         <li class="tab_li neu_box clickable ratio_4x3 open_project_popup rsb" data-id="4">
                             <img src="/img/img_project_rsb.webp" class="backdrop" alt="rwanda standard board website">
                             <div class="desc_con">
-                                <div class="period">2026.3 ~ 2026.6</div>
+                                <div class="period">2026.3 ~ 2026.5</div>
                                 <div class="title">르완다 표준청</div>
                                 <div class="sub_title"><div>르완다 표준청 웹사이트 구축</div><i class="fa-solid fa-angle-right"></i></div>
                             </div>
@@ -315,7 +315,7 @@
                             <img src="img/img_pf_29cm.webp" alt="29cm website">
                         </li>
                         <li class="tab_li neu_box clickable gd ratio_1x1 open_popup" data-id="6">
-                            <img src="img/img_pf_lv.webp" alt="louis vitton 로고 디자인">
+                            <img src="img/img_pf_lv.webp" alt="louis vuitton 로고 디자인">
                         </li>
                         <li class="tab_li neu_box clickable gd ratio_1x1 open_popup" data-id="7">
                             <img src="img/img_pf_lostark.webp" alt="lostark 박스 모델">
@@ -324,10 +324,10 @@
                             <img src="img/img_pf_box.webp" alt="moon and sun 박스 모델">
                         </li>
                         <li class="tab_li neu_box clickable gd ratio_1x1 open_popup" data-id="9">
-                            <img src="img/img_pf_lck.webp" alt="lck 웹 베너">
+                            <img src="img/img_pf_lck.webp" alt="lck 웹 배너">
                         </li>
                         <li class="tab_li neu_box clickable gd ratio_1x1 open_popup" data-id="10">
-                            <img src="img/img_pf_valorant.webp" alt="valorant 웹 베너">
+                            <img src="img/img_pf_valorant.webp" alt="valorant 웹 배너">
                         </li>
                         <li class="tab_li neu_box clickable gd ratio_1x1 open_popup" data-id="11">
                             <img src="img/img_pf_venom.webp" alt="venom 영화 포스터">
@@ -398,14 +398,14 @@
         <div class="width_con">
             <ul class="v_con two_con">
                 <li class="cells neu_box">
-                    <a class="link" href="" target="_blank">
+                    <a class="link" href="" target="_blank" rel="noopener noreferrer">
                         <i class="fa-regular fa-arrow-up-right-from-square"></i>
                     </a>
                     <div class="title_con">
                         <h3>promotion site</h3>
                         <div class="none"></div>
                         <h2></h2>
-                        <h5 class="compeleted"><span>Completed</span><b></b></h5>
+                        <h5 class="completed"><span>Completed</span><b></b></h5>
                         <h5 class="type"><span>Type</span><b></b></h5>
                         <h5 class="tools"><span>Tools</span><b></b></h5>
                         <h5 class="scope"><span>Scope</span><b>dd</b></h5>
@@ -421,7 +421,7 @@
         <div class="width_con">
             <ul class="v_con two_con">
                 <li class="cells neu_box">
-                    <a class="link" href="" target="_blank">
+                    <a class="link" href="" target="_blank" rel="noopener noreferrer">
                         <i class="fa-regular fa-arrow-up-right-from-square"></i>
                     </a>
                     <div class="title_con">

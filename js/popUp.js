@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "h3": "promotion site",
             "h2": "StarCraft II",
             "completed": "2024",
-            "type": "Responsible Web",
+            "type": "Responsive Web",
             "tools": "HTML, CSS, Javascript",
             "scope": "Web Design,<br>Front-End Development",
             "contribution": "100%",
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "data_id": "4",
             "link": "https://aroowsvd.github.io/Graduate-Refactoring/",
-            "h3": "Moive Cinema",
+            "h3": "Movie Cinema",
             "h2": "Drive In Cinema",
             "completed": "2022",
-            "type": "Responsible Web",
+            "type": "Responsive Web",
             "tools": "HTML, CSS, SCSS, Javascript",
             "scope": "Web Design,<br>Front-End Development",
             "contribution": "100%",
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "h3": "Shopping mall",
             "h2": "29cm Clone Coding",
             "completed": "2024",
-            "type": "Responsible Web",
+            "type": "Responsive Web",
             "tools": "HTML, CSS, Javascript",
             "scope": "Web Design,<br>Front-End Development",
             "contribution": "100%",
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const popUpA = document.querySelector('.popup_con .link');
         const titleConh3 = document.querySelector('.popup_con .title_con h3');
         const titleConh2 = document.querySelector('.popup_con .title_con h2');
-        const titleConCompeleted = document.querySelector('.popup_con .title_con .compeleted b');
+        const titleConCompleted = document.querySelector('.popup_con .title_con .completed b');
         const titleConType = document.querySelector('.popup_con .title_con .type b');
         const titleConTools = document.querySelector('.popup_con .title_con .tools b');
         const titleConScope = document.querySelector('.popup_con .title_con .scope b');
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popUpBoxs.forEach(box => {
             box.addEventListener('click', () => {
                 const dataId = box.getAttribute('data-id');
-                popUpData(dataId, popUpA, titleConh3, titleConh2, titleConCompeleted, titleConType, titleConTools, titleConScope, titleConContribution ,portImg);
+                popUpData(dataId, popUpA, titleConh3, titleConh2, titleConCompleted, titleConType, titleConTools, titleConScope, titleConContribution ,portImg);
                 document.documentElement.classList.add('show_popup');
                 popUpCon.scrollTop = 0;
             });
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     popUp();
 
-    const popUpData = (id, a, h3, h2, compeleted, type, tools, scope, contribution, img) => {
+    const popUpData = (id, a, h3, h2, completed, type, tools, scope, contribution, img) => {
         portfolioData.forEach(data => {
             if (id === data.data_id) {
                 if (data.link === undefined) {
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 h3.innerText = `${data.h3}`;
                 h2.innerText = `${data.h2}`;
-                compeleted.innerText = `${data.completed}`;
+                completed.innerText = `${data.completed}`;
                 if (data.type === undefined) {
                     document.querySelector('.type').style.display = 'none';
                 } else {
@@ -180,8 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.querySelector('.contribution').style.display = "block";
                     contribution.innerText = `${data.contribution}`;
                 }
-                const imgEle = data.img_src.map(url => {
-                    return `<img class="neu_box" src=${url} alt="">`
+                const imgEle = data.img_src.map((url, index) => {
+                    const altText = data.img_src.length > 1 
+                        ? `${data.h2} 프로젝트 이미지 ${index + 1}`
+                        : `${data.h2} 프로젝트 이미지`;
+                    return `<img class="neu_box" src="${url}" alt="${altText}">`;
                 });
                 img.innerHTML = imgEle.join('');
             }

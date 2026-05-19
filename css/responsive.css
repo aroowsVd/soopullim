@@ -72,6 +72,8 @@
 
   h3 > i { margin-right: var(--mrgn-half); font-weight: inherit; }
 
+  .fixed_btn { display: none; }
+
   #header.sections.section_00 > .width_con > a { width: 140px; }
   #header.sections.section_00 > .width_con > .lang_btn { right: 60px; }
   #header.sections.section_00 > .width_con > .dark_mode_toggle > .dark_toggle_label { height: 14px; }

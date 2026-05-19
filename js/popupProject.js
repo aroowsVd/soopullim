@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "h3": "Institutional Website",
             "h2": "전남대학교 도서관",
             "completed": "2025.09 ~ 2025.11",
-            "type": "Responsible Web",
+            "type": "Responsive Web",
             "techStack": "HTML, CSS, JavaScript, HBS, GSAP",
             "scm": "bitbucket, sourcetree",
             "contribution": "100%",
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "h3": "Institutional Website",
             "h2": "세종대학교 도서관",
             "completed": "2025.11 ~ 2026.02",
-            "type": "Responsible Web",
+            "type": "Responsive Web",
             "techStack": "HTML, CSS, JavaScript, HBS, GSAP",
             "scm": "bitbucket, sourcetree",
             "contribution": "100%",
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "h3": "Institutional Website",
             "h2": "서울대학교 도서관",
             "completed": "2025.12 ~ 2026.03",
-            "type": "Responsible Web",
+            "type": "Responsive Web",
             "techStack": "HTML, CSS, JavaScript",
             "scm": "gitlab",
             "contribution": "100%",
@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "",
             "h3": "Institutional Website",
             "h2": "르완다 표준청",
-            "completed": "2026.03 ~ 2026.06",
-            "type": "Responsible Web",
+            "completed": "2026.03 ~ 2026.05",
+            "type": "Responsive Web",
             "techStack": "Next.js, TypeScript, Bootstrap, CSS",
             "scm": "git",
             "contribution": "100%",
@@ -106,8 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     li.innerText = desc;
                     descriptionUl.appendChild(li);
                 });
-                const imgEle = data.img_src.map(url => {
-                    return `<img class="neu_box" src="${url}" alt="${data.h2} project image">`;
+                const imgEle = data.img_src.map((url, index) => {
+                    const altText = data.img_src.length > 1
+                        ? `${data.h2} 프로젝트 이미지 ${index + 1}`
+                        : `${data.h2} 프로젝트 이미지`;
+                    return `<img class="neu_box" src="${url}" alt="${altText}">`;
                 });
                 projectImg.innerHTML = imgEle.join('');
             }

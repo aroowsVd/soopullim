@@ -16,32 +16,27 @@ function getCookie(name) {
 
 document.addEventListener('DOMContentLoaded', () => {
     // nav segment move
-    const navLists = document.querySelectorAll('nav li');
+    const navLists = document.querySelectorAll('nav li:not(.nav_segment)');
     const navSegment = document.querySelector('.nav_segment');
-    const sections = document.querySelectorAll('.sections');
+    const navSections = ['#visual', '#about', '#skill', '#works', '#contact'];
+    
     window.addEventListener('scroll', () => {
-        let currentSectionIndex = -1;
-        sections.forEach((section, idx) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if(window.scrollY >= sections[1].offsetHeight) {
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    currentSectionIndex = idx;
-                }
-            } else {
-                currentSectionIndex = 0;
+        let currentSectionIndex = 0;
+        const scrollY = window.scrollY + 100; // offset for fixed header
+        
+        navSections.forEach((sectionId, idx) => {
+            const section = document.querySelector(sectionId);
+            if (section && scrollY >= section.offsetTop) {
+                currentSectionIndex = idx;
             }
         });
-        if(currentSectionIndex !== -1 && currentSectionIndex !== 0) {
-            const currentNavList = navLists[currentSectionIndex - 1];
+        
+        const currentNavList = navLists[currentSectionIndex];
+        if (currentNavList) {
             const navOffsetLeft = currentNavList.offsetLeft;
             const navWidth = currentNavList.offsetWidth;
-
             navSegment.style.left = `${navOffsetLeft - 36}px`;
             navSegment.style.width = `${navWidth}px`;
-        } else {
-            navSegment.style.left = '0px';
-            navSegment.style.width = `${navLists[0].offsetWidth}px`;
         }
     });
 
@@ -62,9 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 ele.classList.add('selected');
 
-                const tbaBtns = Array.from(tabBtn);
-                const vv = tbaBtns.find(item => item.classList.contains('selected'));
-                switch(vv.id) {
+                const selectedTab = Array.from(tabBtn).find(item => item.classList.contains('selected'));
+                switch(selectedTab.id) {
                     case 'tab_01':
                         tabLi.classList.remove('website','gd');
                         tabLi.classList.add('all');
@@ -78,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         tabLi.classList.add('gd');
                         break;
                     default:
-                        alert('err');
+                        console.warn('Unknown tab ID:', selectedTab.id);
                 }
             });
         })
@@ -88,9 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // btn toggle
     const btnToggle = () => {
         const btnMail = document.querySelector('.mail_btn');
-        btnMail.addEventListener('click', () => {
-            btnMail.classList.toggle('active');
+        const toggleMailBtn = () => btnMail.classList.toggle('active');
+        
+        btnMail.addEventListener('click', toggleMailBtn);
+        btnMail.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMailBtn();
+            }
         });
+        btnMail.setAttribute('role', 'button');
+        btnMail.setAttribute('tabindex', '0');
+        btnMail.setAttribute('aria-label', '이메일 주소 표시');
     }
     btnToggle();
 

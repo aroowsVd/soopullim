@@ -136,9 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const bindLanguageMenu = () => {
-        langBtn.addEventListener('click', () => {
-            langDropdown.classList.toggle('open');
+        const toggleDropdown = () => langDropdown.classList.toggle('open');
+        
+        langBtn.addEventListener('click', toggleDropdown);
+        langBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleDropdown();
+            }
         });
+        langBtn.setAttribute('role', 'button');
+        langBtn.setAttribute('tabindex', '0');
+        langBtn.setAttribute('aria-label', '언어 선택');
+        langBtn.setAttribute('aria-haspopup', 'true');
 
         document.addEventListener('click', (event) => {
             if (!langBtn.contains(event.target) && !langDropdown.contains(event.target)) {
@@ -151,11 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            button.addEventListener('click', () => {
+            const selectLanguage = () => {
                 setSelectedLanguage(lang);
                 langDropdown.classList.remove('open');
                 applyGoogleLanguage(lang);
+            };
+
+            button.addEventListener('click', selectLanguage);
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selectLanguage();
+                }
             });
+            button.setAttribute('role', 'button');
+            button.setAttribute('tabindex', '0');
         });
     };
 
