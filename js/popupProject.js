@@ -52,6 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": ["Next.js 기반 환경에서 React Hooks를 활용한 동적 DOM 제어 및 조건부 렌더링 구현", "Bootstrap과 CSS를 이용한 반응형 디자인 구현", "Git을 통한 버전 관리 및 협업", "르완다 표준청의 요구사항에 맞춘 사용자 친화적 인터페이스 설계", "웹사이트 성능 최적화 및 SEO 고려한 개발"],
             "img_src": ["img/img_p_popup_rsb.webp", "img/img_p_popup_rsb_01.webp", "img/img_p_popup_rsb_02.webp"]
         },
+        {
+            "data_id": "5",
+            "link": "https://indang.howon.ac.kr/",
+            "h3": "Institutional Website",
+            "h2": "호원대학교 인당도서관",
+            "completed": "2026.08 ~ 2026.09",
+            "type": "Responsive Web",
+            "techStack": "HTML, CSS, JavaScript",
+            "scm": "git",
+            "contribution": "100%",
+            "description": ["HTML / CSS / JavaScript(ES6) 기반 반응형 웹사이트 제작 (Main, Sub)", "SCSS @mixin 및 전역 변수 설계로 유지보수성과 재사용성 강화", "JavaScript 기반 DOM 제어 및 인터랙션 구현", "웹 접근성, performance 최적화 고려"],
+            "img_src": ["img/img_p_popup_howon.webp", "img/img_p_popup_howon_01.webp"]
+        }
     ];
 
     const popupProject = () => {

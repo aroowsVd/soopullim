@@ -178,6 +178,7 @@ html.dark #footer.sections.section_06 > p { opacity: 0.8; }
 #project > .width_con .tab_li_con ul li.sj { background: linear-gradient(135deg, #900c12, #b5121b); }
 #project > .width_con .tab_li_con ul li.cnu { background: linear-gradient(135deg, #00451f, #007f39); }
 #project > .width_con .tab_li_con ul li.rsb { background: linear-gradient(135deg, #41509e, #92d7f3); }
+#project > .width_con .tab_li_con ul li.howon { background: linear-gradient(135deg, #00631b, #009933); }
 #project > .width_con .tab_li_con ul li img { position: absolute; width: 100%; height: 100%; object-fit: cover; transition: all 0.2s ease-in-out; }
 #project > .width_con .tab_li_con ul li .desc_con { position: absolute; left: 0; right: 0; bottom: 0; display: grid; justify-content: flex-start; align-content: end; gap: 8px; padding: var(--mrgn); z-index: 2; }
 #project > .width_con .tab_li_con ul li .period { color: var(--color-w-085); font-size: 14px; font-weight: 500; }
